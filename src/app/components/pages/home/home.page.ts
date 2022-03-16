@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseAnalytics } from '@awesome-cordova-plugins/firebase-analytics/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private firebaseAnalytics: FirebaseAnalytics
+  ) { }
 
   ngOnInit() {
+      console.log('home')
+      this.firebaseAnalytics.logEvent('into to home', {})
+      .then(res => {
+        console.log('SUCCESS:', res)
+      })
+      .catch(err => {
+        console.log('ERROR:',err)
+      })
   }
 
 }

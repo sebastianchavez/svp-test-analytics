@@ -8,6 +8,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 import { HeaderModule } from '../../common/header/header.module';
+// import { FirebaseAnalytics } from '@awesome-cordova-plugins/firebase-analytics/ngx';
+// import {Firebase } from '@ionic-native/firebase/ngx'
 
 @NgModule({
   imports: [
@@ -17,6 +19,10 @@ import { HeaderModule } from '../../common/header/header.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  // providers:[
+  //   FirebaseAnalytics,
+  //   Firebase
+  // ]
 })
 export class HomePageModule {}

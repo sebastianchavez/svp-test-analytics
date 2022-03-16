@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseAnalytics } from '@awesome-cordova-plugins/firebase-analytics/ngx';
 
 @Component({
   selector: 'app-buttons',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private firebaseAnalytics:FirebaseAnalytics
+  ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    try {
+      console.log('buttons')
+      const response = await this.firebaseAnalytics.logEvent('into to buttons', {})
+      console.log('firebase ok', response)
+    } catch (error) {
+      console.log('error:', error)
+    }
   }
 
 }

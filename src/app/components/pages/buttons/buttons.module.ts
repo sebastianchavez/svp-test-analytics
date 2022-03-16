@@ -8,6 +8,8 @@ import { ButtonsPageRoutingModule } from './buttons-routing.module';
 
 import { ButtonsPage } from './buttons.page';
 import { HeaderModule } from '../../common/header/header.module';
+// import { FirebaseAnalytics } from '@awesome-cordova-plugins/firebase-analytics/ngx';
+// import { Firebase } from '@awesome-cordova-plugins/firebase/ngx';
 
 @NgModule({
   imports: [
@@ -17,6 +19,10 @@ import { HeaderModule } from '../../common/header/header.module';
     IonicModule,
     ButtonsPageRoutingModule
   ],
-  declarations: [ButtonsPage]
+  declarations: [ButtonsPage],
+  // providers:[
+  //   FirebaseAnalytics,
+  //   Firebase
+  // ]
 })
 export class ButtonsPageModule {}
