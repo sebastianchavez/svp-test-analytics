@@ -1,0 +1,7 @@
+{
+  "name": "svp-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
